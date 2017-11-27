@@ -1,0 +1,4 @@
+#!/bin/bash
+file=$(echo $1 | sed 's/\.png//g' | sed 's/\.ico//g')
+convert $1 -resize 16x16! $file.ico
+echo "saved to $file.ico"
